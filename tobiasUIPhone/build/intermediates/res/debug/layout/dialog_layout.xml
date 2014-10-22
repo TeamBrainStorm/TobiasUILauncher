@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<SeekBar
+    android:id="@+id/brightbar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="20dp" />
+
+<Button
+    android:id="@+id/okk"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/brightbar"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:text="Cancel" />
+
+</RelativeLayout>
+<!-- From: file:/Users/chris/Desktop/School%20Tools%20Launcher/Tobias%20UI%20Phone/tobiasUIPhone/src/main/res/layout/dialog_layout.xml -->

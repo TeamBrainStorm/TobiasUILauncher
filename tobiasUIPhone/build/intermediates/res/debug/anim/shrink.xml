@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* @author Mohammad Adib
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <scale
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:duration="@android:integer/config_longAnimTime"
+        android:pivotX="50%p"
+        android:pivotY="50%p"
+        android:fromXScale="1"
+        android:fromYScale="1"
+        android:toXScale="0.8"
+        android:toYScale="0.8" />
+
+</set><!-- From: file:/Users/chris/Desktop/School%20Tools%20Launcher/Tobias%20UI%20Phone/tobiasUIPhone/src/main/res/anim/shrink.xml -->

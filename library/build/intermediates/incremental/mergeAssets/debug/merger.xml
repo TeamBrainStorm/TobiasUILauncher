@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/library/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/library/src/debug/assets" />
+    </dataSet>
+
+</merger>

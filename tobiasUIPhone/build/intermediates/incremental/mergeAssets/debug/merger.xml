@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="19.1.0" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/19.1.0/assets" />
+    </dataSet>
+    <dataSet config="unspecified" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/assets" >
+            <file
+                name="lightfont.otf"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/assets/lightfont.otf" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/debug/assets" />
+    </dataSet>
+
+</merger>

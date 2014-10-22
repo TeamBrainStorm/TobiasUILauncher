@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="25"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription,UseCompoundDrawables" >
+
+    <ImageView
+        android:id="@+id/grid_item_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/grid_item_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@android:color/white" />
+
+</LinearLayout><!-- From: file:/Users/chris/Desktop/School%20Tools%20Launcher/Tobias%20UI%20Phone/tobiasUIPhone/src/main/res/layout/custom.xml -->

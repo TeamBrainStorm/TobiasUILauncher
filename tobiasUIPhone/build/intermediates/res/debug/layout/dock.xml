@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/dock" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/allapps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/smsbttn"
+        android:layout_alignBottom="@+id/smsbttn"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/back"
+        android:onClick="back" />
+
+    <Button
+        android:id="@+id/phonebttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="53dp"
+        android:background="@drawable/diler"
+        android:onClick="phone" />
+
+    <Button
+        android:id="@+id/smsbttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/sms"
+        android:onClick="sms" />
+
+</RelativeLayout><!-- From: file:/Users/chris/Desktop/School%20Tools%20Launcher/Tobias%20UI%20Phone/tobiasUIPhone/src/main/res/layout/dock.xml -->

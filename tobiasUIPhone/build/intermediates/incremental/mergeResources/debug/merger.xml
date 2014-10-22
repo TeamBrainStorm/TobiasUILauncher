@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="19.1.0" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/19.1.0/res" >
+            <file
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/19.1.0/res/values/values.xml"
+                qualifiers="" >
+                <declare-styleable name="GridLayout_Layout" >
+
+                    <!--
+              support versions. All attributes not present in MarginLayout are
+              redefined in the support library name space.
+                    -->
+
+
+                    <!-- START MarginLayout layoutparams -->
+
+                    <attr name="android:layout_width" />
+                    <attr name="android:layout_height" />
+                    <!--
+              Specifies extra space on the left, top, right and bottom
+              sides of this view. This space is outside this view's bounds.
+                    -->
+                    <attr name="android:layout_margin" />
+                    <!--
+              Specifies extra space on the left side of this view.
+              This space is outside this view's bounds.
+                    -->
+                    <attr name="android:layout_marginLeft" />
+                    <!--
+              Specifies extra space on the top side of this view.
+              This space is outside this view's bounds.
+                    -->
+                    <attr name="android:layout_marginTop" />
+                    <!--
+              Specifies extra space on the right side of this view.
+              This space is outside this view's bounds.
+                    -->
+                    <attr name="android:layout_marginRight" />
+                    <!--
+              Specifies extra space on the bottom side of this view.
+              This space is outside this view's bounds.
+                    -->
+                    <attr name="android:layout_marginBottom" />
+
+                    <!-- END MarginLayout layoutparams -->
+
+
+                    <!--
+        The row boundary delimiting the top of the group of cells
+        occupied by this view.
+                    -->
+                    <attr
+                        name="layout_row"
+                        format="integer" />
+                    <!--
+        The row span: the difference between the bottom and top
+        boundaries delimiting the group of cells occupied by this view.
+        The default is one.
+        See {@link android.widget.GridLayout.Spec}.
+                    -->
+                    <attr
+                        name="layout_rowSpan"
+                        format="integer"
+                        min="1" />
+                    <!--
+        The column boundary delimiting the left of the group of cells
+        occupied by this view.
+                    -->
+                    <attr
+                        name="layout_column"
+                        format="integer" />
+                    <!--
+        The column span: the difference between the right and left
+        boundaries delimiting the group of cells occupied by this view.
+        The default is one.
+        See {@link android.widget.GridLayout.Spec}.
+                    -->
+                    <attr
+                        name="layout_columnSpan"
+                        format="integer"
+                        min="1" />
+                    <!--
+        Gravity specifies how a component should be placed in its group of cells.
+        The default is LEFT | BASELINE.
+        See {@link android.widget.GridLayout.LayoutParams#setGravity(int)}.
+                    -->
+                    <attr name="layout_gravity" >
+
+                        <!-- Push object to the top of its container, not changing its size. -->
+                        <flag
+                            name="top"
+                            value="0x30" />
+                        <!-- Push object to the bottom of its container, not changing its size. -->
+                        <flag
+                            name="bottom"
+                            value="0x50" />
+                        <!-- Push object to the left of its container, not changing its size. -->
+                        <flag
+                            name="left"
+                            value="0x03" />
+                        <!-- Push object to the right of its container, not changing its size. -->
+                        <flag
+                            name="right"
+                            value="0x05" />
+                        <!-- Place object in the vertical center of its container, not changing its size. -->
+                        <flag
+                            name="center_vertical"
+                            value="0x10" />
+                        <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+                        <flag
+                            name="fill_vertical"
+                            value="0x70" />
+                        <!-- Place object in the horizontal center of its container, not changing its size. -->
+                        <flag
+                            name="center_horizontal"
+                            value="0x01" />
+                        <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+                        <flag
+                            name="fill_horizontal"
+                            value="0x07" />
+                        <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+                        <flag
+                            name="center"
+                            value="0x11" />
+                        <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+                        <flag
+                            name="fill"
+                            value="0x77" />
+                        <!--
+             Additional option that can be set to have the top and/or bottom edges of
+             the child clipped to its container's bounds.
+             The clip will be based on the vertical gravity: a top gravity will clip the bottom
+             edge, a bottom gravity will clip the top edge, and neither will clip both edges.
+                        -->
+                        <flag
+                            name="clip_vertical"
+                            value="0x80" />
+                        <!--
+             Additional option that can be set to have the left and/or right edges of
+             the child clipped to its container's bounds.
+             The clip will be based on the horizontal gravity: a left gravity will clip the right
+             edge, a right gravity will clip the left edge, and neither will clip both edges.
+                        -->
+                        <flag
+                            name="clip_horizontal"
+                            value="0x08" />
+                        <!-- Push object to the beginning of its container, not changing its size. -->
+                        <flag
+                            name="start"
+                            value="0x00800003" />
+                        <!-- Push object to the end of its container, not changing its size. -->
+                        <flag
+                            name="end"
+                            value="0x00800005" />
+                    </attr>
+                </declare-styleable>
+
+                <dimen name="default_gap" >16dip
+                </dimen>
+
+                <declare-styleable name="GridLayout" >
+
+                    <!--
+              support versions. All attributes not present in ViewGroup/View are
+              redefined in the support library namespace.
+                    -->
+
+
+                    <!--
+        The orientation property is not used during layout. It is only used to
+        allocate row and column parameters when they are not specified by its children's
+        layout parameters. GridLayout works like LinearLayout in this case;
+        putting all the components either in a single row or in a single column -
+        depending on the value of this flag. In the horizontal case, a columnCount
+        property may be additionally supplied to force new rows to be created when a
+        row is full. The rowCount attribute may be used similarly in the vertical case.
+        The default is horizontal.
+                    -->
+                    <attr name="orientation" >
+
+                        <!-- Defines an horizontal widget. -->
+                        <enum
+                            name="horizontal"
+                            value="0" />
+                        <!-- Defines a vertical widget. -->
+                        <enum
+                            name="vertical"
+                            value="1" />
+                    </attr>
+                    <!-- The maximum number of rows to create when automatically positioning children. -->
+                    <attr
+                        name="rowCount"
+                        format="integer" />
+                    <!-- The maximum number of columns to create when automatically positioning children. -->
+                    <attr
+                        name="columnCount"
+                        format="integer" />
+                    <!--
+        When set to true, tells GridLayout to use default margins when none are specified
+        in a view's layout parameters.
+        The default value is false.
+        See {@link android.widget.GridLayout#setUseDefaultMargins(boolean)}.
+                    -->
+                    <attr
+                        name="useDefaultMargins"
+                        format="boolean" />
+                    <!--
+        When set to alignMargins, causes alignment to take place between the outer
+        boundary of a view, as defined by its margins. When set to alignBounds,
+        causes alignment to take place between the edges of the view.
+        The default is alignMargins.
+        See {@link android.widget.GridLayout#setAlignmentMode(int)}.
+                    -->
+                    <attr name="alignmentMode" >
+
+                        <!--
+            Align the bounds of the children.
+            See {@link android.widget.GridLayout#ALIGN_BOUNDS}.
+                        -->
+                        <enum
+                            name="alignBounds"
+                            value="0" />
+                        <!--
+            Align the margins of the children.
+            See {@link android.widget.GridLayout#ALIGN_MARGINS}.
+                        -->
+                        <enum
+                            name="alignMargins"
+                            value="1" />
+                    </attr>
+                    <!--
+        When set to true, forces row boundaries to appear in the same order
+        as row indices.
+        The default is true.
+        See {@link android.widget.GridLayout#setRowOrderPreserved(boolean)}.
+                    -->
+                    <attr
+                        name="rowOrderPreserved"
+                        format="boolean" />
+                    <!--
+        When set to true, forces column boundaries to appear in the same order
+        as column indices.
+        The default is true.
+        See {@link android.widget.GridLayout#setColumnOrderPreserved(boolean)}.
+                    -->
+                    <attr
+                        name="columnOrderPreserved"
+                        format="boolean" />
+                </declare-styleable>
+            </file>
+        </source>
+    </dataSet>
+    <dataSet config="unspecified" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res" >
+            <file
+                name="vpi__dark_theme"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/color/vpi__dark_theme.xml"
+                qualifiers=""
+                type="color" />
+            <file
+                name="vpi__light_theme"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/color/vpi__light_theme.xml"
+                qualifiers=""
+                type="color" />
+            <file
+                name="vpi__tab_indicator"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable/vpi__tab_indicator.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="vpi__tab_selected_focused_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-hdpi-v4/vpi__tab_selected_focused_holo.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_selected_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-hdpi-v4/vpi__tab_selected_holo.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_selected_pressed_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-hdpi-v4/vpi__tab_selected_pressed_holo.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_unselected_focused_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-hdpi-v4/vpi__tab_unselected_focused_holo.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_unselected_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-hdpi-v4/vpi__tab_unselected_holo.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_unselected_pressed_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-hdpi-v4/vpi__tab_unselected_pressed_holo.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_selected_focused_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-mdpi-v4/vpi__tab_selected_focused_holo.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_selected_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-mdpi-v4/vpi__tab_selected_holo.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_selected_pressed_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-mdpi-v4/vpi__tab_selected_pressed_holo.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_unselected_focused_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-mdpi-v4/vpi__tab_unselected_focused_holo.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_unselected_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-mdpi-v4/vpi__tab_unselected_holo.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_unselected_pressed_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-mdpi-v4/vpi__tab_unselected_pressed_holo.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_selected_focused_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_selected_focused_holo.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_selected_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_selected_holo.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_selected_pressed_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_selected_pressed_holo.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_unselected_focused_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_unselected_focused_holo.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_unselected_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_unselected_holo.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="vpi__tab_unselected_pressed_holo"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_unselected_pressed_holo.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/intermediates/exploded-aar/Tobias UI Phone/library/unspecified/res/values/values.xml"
+                qualifiers="" >
+                <color name="default_circle_indicator_fill_color" >#FFFFFFFF
+                </color>
+
+                <bool name="default_title_indicator_selected_bold" >
+true
+                </bool>
+
+                <style
+                    name="Theme.PageIndicatorDefaults"
+                    parent="android:Theme" >
+                    <item name="vpiIconPageIndicatorStyle">
+@style/Widget.IconPageIndicator
+                    </item>
+                    <item name="vpiTabPageIndicatorStyle">
+@style/Widget.TabPageIndicator
+                    </item>
+                </style>
+
+                <color name="default_underline_indicator_selected_color" >#FF33B5E5
+                </color>
+
+                <dimen name="default_title_indicator_clip_padding" >4dp
+                </dimen>
+
+                <integer name="default_underline_indicator_fade_length" >
+400
+                </integer>
+
+                <color name="vpi__bright_foreground_inverse_holo_dark" >@color/vpi__bright_foreground_holo_light
+                </color>
+
+                <declare-styleable name="CirclePageIndicator" >
+
+                    <!-- Whether or not the indicators should be centered. -->
+                    <attr name="centered" />
+                    <!-- Color of the filled circle that represents the current page. -->
+                    <attr
+                        name="fillColor"
+                        format="color" />
+                    <!-- Color of the filled circles that represents pages. -->
+                    <attr
+                        name="pageColor"
+                        format="color" />
+                    <!-- Orientation of the indicator. -->
+                    <attr name="android:orientation" />
+                    <!-- Radius of the circles. This is also the spacing between circles. -->
+                    <attr
+                        name="radius"
+                        format="dimension" />
+                    <!-- Whether or not the selected indicator snaps to the circles. -->
+                    <attr
+                        name="snap"
+                        format="boolean" />
+                    <!-- Color of the open circles. -->
+                    <attr
+                        name="strokeColor"
+                        format="color" />
+                    <!-- Width of the stroke used to draw the circles. -->
+                    <attr name="strokeWidth" />
+                    <!-- View background -->
+                    <attr name="android:background" />
+                </declare-styleable>
+
+                <dimen name="default_title_indicator_footer_indicator_height" >4dp
+                </dimen>
+
+                <color name="vpi__bright_foreground_holo_light" >@color/vpi__background_holo_dark
+                </color>
+
+                <style
+                    name="Widget.TabPageIndicator"
+                    parent="Widget" >
+                    <item name="android:gravity">
+center
+                    </item>
+                    <item name="android:background">
+@drawable/vpi__tab_indicator
+                    </item>
+                    <item name="android:paddingLeft">
+22dip
+                    </item>
+                    <item name="android:paddingRight">
+22dip
+                    </item>
+                    <item name="android:paddingTop">
+12dp
+                    </item>
+                    <item name="android:paddingBottom">
+12dp
+                    </item>
+                    <item name="android:textAppearance">
+@style/TextAppearance.TabPageIndicator
+                    </item>
+                    <item name="android:textSize">
+12sp
+                    </item>
+                    <item name="android:maxLines">
+1
+                    </item>
+                </style>
+
+                <color name="vpi__background_holo_light" >#fff3f3f3
+                </color>
+
+                <integer name="default_title_indicator_footer_indicator_style" >
+2
+                </integer>
+
+                <dimen name="default_title_indicator_top_padding" >7dp
+                </dimen>
+
+                <declare-styleable name="ViewPagerIndicator" >
+
+                    <!-- Style of the circle indicator. -->
+                    <attr
+                        name="vpiCirclePageIndicatorStyle"
+                        format="reference" />
+                    <!-- Style of the icon indicator's views. -->
+                    <attr
+                        name="vpiIconPageIndicatorStyle"
+                        format="reference" />
+                    <!-- Style of the line indicator. -->
+                    <attr
+                        name="vpiLinePageIndicatorStyle"
+                        format="reference" />
+                    <!-- Style of the title indicator. -->
+                    <attr
+                        name="vpiTitlePageIndicatorStyle"
+                        format="reference" />
+                    <!-- Style of the tab indicator's tabs. -->
+                    <attr
+                        name="vpiTabPageIndicatorStyle"
+                        format="reference" />
+                    <!-- Style of the underline indicator. -->
+                    <attr
+                        name="vpiUnderlinePageIndicatorStyle"
+                        format="reference" />
+                </declare-styleable>
+
+                <color name="default_title_indicator_text_color" >#BBFFFFFF
+                </color>
+
+                <dimen name="default_title_indicator_title_padding" >5dp
+                </dimen>
+
+                <color name="vpi__background_holo_dark" >#ff000000
+                </color>
+
+                <attr
+                    name="strokeWidth"
+                    format="dimension" />
+
+                <declare-styleable name="LinePageIndicator" >
+
+                    <!-- Whether or not the indicators should be centered. -->
+                    <attr name="centered" />
+                    <!-- Color of the unselected lines that represent the pages. -->
+                    <attr name="unselectedColor" />
+                    <!-- Color of the selected line that represents the current page. -->
+                    <attr name="selectedColor" />
+                    <!-- Width of each indicator line. -->
+                    <attr
+                        name="lineWidth"
+                        format="dimension" />
+                    <!-- Width of each indicator line's stroke. -->
+                    <attr name="strokeWidth" />
+                    <!-- Width of the gap between each indicator line. -->
+                    <attr
+                        name="gapWidth"
+                        format="dimension" />
+                    <!-- View background -->
+                    <attr name="android:background" />
+                </declare-styleable>
+
+                <bool name="default_underline_indicator_fades" >
+true
+                </bool>
+
+                <dimen name="default_line_indicator_gap_width" >4dp
+                </dimen>
+
+                <integer name="default_title_indicator_line_position" >
+0
+                </integer>
+
+                <dimen name="default_line_indicator_stroke_width" >1dp
+                </dimen>
+
+                <style name="Widget" />
+
+                <color name="vpi__bright_foreground_disabled_holo_light" >#ffb2b2b2
+                </color>
+
+                <bool name="default_line_indicator_centered" >
+true
+                </bool>
+
+                <dimen name="default_circle_indicator_radius" >3dp
+                </dimen>
+
+                <color name="vpi__bright_foreground_holo_dark" >@color/vpi__background_holo_light
+                </color>
+                <color name="default_circle_indicator_page_color" >#00000000
+                </color>
+
+                <bool name="default_circle_indicator_snap" >
+false
+                </bool>
+
+                <attr
+                    name="centered"
+                    format="boolean" />
+
+                <color name="vpi__bright_foreground_disabled_holo_dark" >#ff4c4c4c
+                </color>
+
+                <attr
+                    name="selectedColor"
+                    format="color" />
+
+                <dimen name="default_line_indicator_line_width" >12dp
+                </dimen>
+
+                <declare-styleable name="TitlePageIndicator" >
+
+                    <!-- Screen edge padding. -->
+                    <attr
+                        name="clipPadding"
+                        format="dimension" />
+                    <!-- Color of the footer line and indicator. -->
+                    <attr
+                        name="footerColor"
+                        format="color" />
+                    <!-- Height of the footer line. -->
+                    <attr
+                        name="footerLineHeight"
+                        format="dimension" />
+                    <!-- Style of the indicator. Default is triangle. -->
+                    <attr name="footerIndicatorStyle" >
+                        <enum
+                            name="none"
+                            value="0" />
+                        <enum
+                            name="triangle"
+                            value="1" />
+                        <enum
+                            name="underline"
+                            value="2" />
+                    </attr>
+                    <!-- Height of the indicator above the footer line. -->
+                    <attr
+                        name="footerIndicatorHeight"
+                        format="dimension" />
+                    <!-- Left and right padding of the underline indicator. -->
+                    <attr
+                        name="footerIndicatorUnderlinePadding"
+                        format="dimension" />
+                    <!-- Padding between the bottom of the title and the footer. -->
+                    <attr
+                        name="footerPadding"
+                        format="dimension" />
+                    <!-- Position of the line. -->
+                    <attr name="linePosition" >
+                        <enum
+                            name="bottom"
+                            value="0" />
+                        <enum
+                            name="top"
+                            value="1" />
+                    </attr>
+                    <!-- Color of the selected title. -->
+                    <attr name="selectedColor" />
+                    <!-- Whether or not the selected item is displayed as bold. -->
+                    <attr
+                        name="selectedBold"
+                        format="boolean" />
+                    <!-- Color of regular titles. -->
+                    <attr name="android:textColor" />
+                    <!-- Size of title text. -->
+                    <attr name="android:textSize" />
+                    <!-- Padding between titles when bumping into each other. -->
+                    <attr
+                        name="titlePadding"
+                        format="dimension" />
+                    <!-- Padding between titles and the top of the View. -->
+                    <attr
+                        name="topPadding"
+                        format="dimension" />
+                    <!-- View background -->
+                    <attr name="android:background" />
+                </declare-styleable>
+                <declare-styleable name="UnderlinePageIndicator" >
+
+                    <!-- Whether or not the selected indicator fades. -->
+                    <attr
+                        name="fades"
+                        format="boolean" />
+                    <!-- Length of the delay to fade the indicator. -->
+                    <attr
+                        name="fadeDelay"
+                        format="integer" />
+                    <!-- Length of the indicator fade to transparent. -->
+                    <attr
+                        name="fadeLength"
+                        format="integer" />
+                    <!-- Color of the selected line that represents the current page. -->
+                    <attr name="selectedColor" />
+                    <!-- View background -->
+                    <attr name="android:background" />
+                </declare-styleable>
+
+                <color name="default_circle_indicator_stroke_color" >#FFDDDDDD
+                </color>
+                <color name="default_line_indicator_selected_color" >#FF33B5E5
+                </color>
+
+                <integer name="default_underline_indicator_fade_delay" >
+300
+                </integer>
+                <integer name="default_circle_indicator_orientation" >
+0
+                </integer>
+
+                <dimen name="default_title_indicator_footer_padding" >7dp
+                </dimen>
+
+                <bool name="default_circle_indicator_centered" >
+true
+                </bool>
+
+                <color name="vpi__bright_foreground_inverse_holo_light" >@color/vpi__bright_foreground_holo_dark
+                </color>
+
+                <attr
+                    name="unselectedColor"
+                    format="color" />
+
+                <dimen name="default_title_indicator_text_size" >15dp
+                </dimen>
+                <dimen name="default_circle_indicator_stroke_width" >1dp
+                </dimen>
+
+                <color name="default_line_indicator_unselected_color" >#FFBBBBBB
+                </color>
+
+                <style
+                    name="Widget.IconPageIndicator"
+                    parent="Widget" >
+                    <item name="android:layout_marginLeft">
+6dp
+                    </item>
+                    <item name="android:layout_marginRight">
+6dp
+                    </item>
+                </style>
+
+                <dimen name="default_title_indicator_footer_indicator_underline_padding" >20dp
+                </dimen>
+
+                <style
+                    name="TextAppearance.TabPageIndicator"
+                    parent="Widget" >
+                    <item name="android:textStyle">
+bold
+                    </item>
+                    <item name="android:textColor">
+@color/vpi__dark_theme
+                    </item>
+                </style>
+
+                <color name="default_title_indicator_selected_color" >#FFFFFFFF
+                </color>
+
+                <dimen name="default_title_indicator_footer_line_height" >2dp
+                </dimen>
+
+                <color name="default_title_indicator_footer_color" >#FF33B5E5
+                </color>
+            </file>
+        </source>
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res" >
+            <file
+                name="cycle"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/cycle.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="down_from_top"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/down_from_top.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="expand"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/expand.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="hold"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/hold.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="progress_bar_spinner"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/progress_bar_spinner.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="row_down"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/row_down.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="row_up"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/row_up.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="shake"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/shake.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="shrink"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/shrink.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_in_bottom"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/slide_in_bottom.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_in_left"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/slide_in_left.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_in_right"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/slide_in_right.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_in_top"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/slide_in_top.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_out_bottom"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/slide_out_bottom.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_out_left"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/slide_out_left.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_out_right"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/slide_out_right.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_out_top"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/slide_out_top.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="up_from_bottom"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/anim/up_from_bottom.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="ap_mode"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/ap_mode.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="appdrawer"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/appdrawer.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="b_tooth"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/b_tooth.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="brigthness"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/brigthness.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="diler"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/diler.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="dock"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/dock.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="facebook2"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/facebook2.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="instagram5"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/instagram5.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="sms"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/sms.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="spe_k"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/spe_k.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="twitter"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/twitter.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="w_ir_ls"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-hdpi/w_ir_ls.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ad_market"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/ad_market.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ap_mode"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/ap_mode.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="app_com_dropbox_android"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/app_com_dropbox_android.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="app_com_evernote"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/app_com_evernote.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="app_com_google_android_apps_plus__com_google_android_apps_plus_phone_homeactivity"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/app_com_google_android_apps_plus__com_google_android_apps_plus_phone_homeactivity.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="app_com_google_android_gm"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/app_com_google_android_gm.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="app_com_google_android_googlequicksearchbox"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/app_com_google_android_googlequicksearchbox.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="app_com_google_android_talk"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/app_com_google_android_talk.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="app_com_google_android_youtube"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/app_com_google_android_youtube.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="app_org_wordpress_android"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/app_org_wordpress_android.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="appstore"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/appstore.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="b_tooth"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/b_tooth.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="brigthness"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/brigthness.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="browser"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/browser.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="calculator"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/calculator.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="calendar"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/calendar.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="camera"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/camera.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="contacts"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/contacts.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="deskclock"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/deskclock.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="dialer"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/dialer.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="facebook"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/facebook.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="fakecalendar"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/fakecalendar.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="gallery"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/gallery.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="gamecenter"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/gamecenter.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="greatapps"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/greatapps.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="icon_2048"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/icon_2048.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="mail"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/mail.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="map"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/map.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="mms"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/mms.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="music"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/music.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="notelist"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/notelist.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="notes"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/notes.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="reminders"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/reminders.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="settings"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/settings.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="spe_k"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/spe_k.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="stock"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/stock.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="twitter"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/twitter.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="video"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/video.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="w_ir_ls"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/w_ir_ls.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="weather"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-mdpi/weather.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ap_mode"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-xhdpi/ap_mode.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="b_tooth"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-xhdpi/b_tooth.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="back"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-xhdpi/back.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="brigthness"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-xhdpi/brigthness.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="spe_k"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-xhdpi/spe_k.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="w_ir_ls"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/drawable-xhdpi/w_ir_ls.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="custom"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/layout/custom.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="dialog_layout"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/layout/dialog_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="dock"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/layout/dock.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="grid"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/layout/grid.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="home"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/layout/home.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/layout/main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="vf"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/layout/vf.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="viewpager_main"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/layout/viewpager_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main"
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/menu/activity_main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="app_name" >Tobias UI
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="menu_settings" >Settings
+                </string>
+            </file>
+            <file
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/values/styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Light" />
+            </file>
+            <file
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/values-v11/styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Holo.Light" />
+            </file>
+            <file
+                path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/main/res/values-v14/styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" />
+            </file>
+        </source>
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/generated/res/rs/debug" />
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/build/generated/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/chris/Desktop/School Tools Launcher/Tobias UI Phone/tobiasUIPhone/src/debug/res" />
+    </dataSet>
+
+</merger>

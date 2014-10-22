@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/Users/chris/Desktop/School%20Tools%20Launcher/Tobias%20UI%20Phone/tobiasUIPhone/src/main/res/values-v14/styles.xml -->
+    <eat-comment />
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar" />
+
+</resources>
