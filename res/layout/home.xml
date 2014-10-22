@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/dock" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/allapps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/smsbttn"
+        android:layout_alignBottom="@+id/smsbttn"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/appdrawer"
+        android:onClick="apps" />
+
+    <Button
+        android:id="@+id/phonebttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/allapps"
+        android:layout_alignBottom="@+id/allapps"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:background="@drawable/diler"
+        android:onClick="phone" />
+
+    <Button
+        android:id="@+id/smsbttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/sms"
+        android:onClick="sms" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@+id/allapps"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/dock" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fbbttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/linearLayout1"
+        android:layout_alignLeft="@+id/phonebttn"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/facebook2"
+        android:onClick="facebook" />
+
+    <Button
+        android:id="@+id/grambttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fbbttn"
+        android:layout_alignBottom="@+id/fbbttn"
+        android:layout_alignLeft="@+id/allapps"
+        android:background="@drawable/instagram5"
+        android:onClick="gram" />
+
+    <Button
+        android:id="@+id/twitterbttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/grambttn"
+        android:layout_alignBottom="@+id/grambttn"
+        android:layout_alignLeft="@+id/smsbttn"
+        android:background="@drawable/twitter"
+        android:onClick="twitter" />
+
+    <AnalogClock
+        android:id="@+id/analogClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp" />
+
+    <DigitalClock
+        android:id="@+id/digitalClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/analogClock1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="DigitalClock" />
+
+</RelativeLayout>
